@@ -1,0 +1,19 @@
+<ui-section [title]="title()" [subtitle]="subtitle()">
+  <div class="grid">
+    @for (item of displayItems(); track item.title) {
+      <ui-card [title]="item.title" [subtitle]="item.subtitle" [hoverable]="true">
+        <ul class="bullets">
+          @for (b of item.bullets; track b) {
+            <li>{{ b }}</li>
+          }
+        </ul>
+
+        <div class="tags">
+          @for (t of item.tags; track t) {
+            <ui-badge variant="soft">{{ t }}</ui-badge>
+          }
+        </div>
+      </ui-card>
+    }
+  </div>
+</ui-section>
