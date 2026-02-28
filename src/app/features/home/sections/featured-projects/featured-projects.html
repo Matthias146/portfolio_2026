@@ -1,0 +1,10 @@
+<ui-section
+  title="Featured Projects"
+  subtitle="Drei Projekte, die meinen Angular-Fokus und meine Arbeitsweise am besten zeigen."
+>
+  <div class="grid">
+    @for (p of featured(); track p.slug) {
+      <app-project-card [project]="p" />
+    }
+  </div>
+</ui-section>
