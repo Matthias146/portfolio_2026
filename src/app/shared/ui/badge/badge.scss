@@ -1,0 +1,23 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  line-height: 1;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface-2) 75%, transparent);
+}
+
+.badge[data-variant='accent'] {
+  color: color-mix(in srgb, var(--accent) 92%, white);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+}
+
+.badge[data-variant='soft'] {
+  color: var(--text);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+}

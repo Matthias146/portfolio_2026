@@ -1,0 +1,15 @@
+@if (href()) {
+  <a
+    class="btn"
+    [attr.data-variant]="variant()"
+    [href]="href()"
+    [target]="target()"
+    [attr.rel]="computedRel()"
+  >
+    <ng-content />
+  </a>
+} @else {
+  <button class="btn" [attr.data-variant]="variant()" [disabled]="disabled()">
+    <ng-content />
+  </button>
+}
