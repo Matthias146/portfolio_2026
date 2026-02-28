@@ -24,3 +24,16 @@
 .card-body {
   display: block;
 }
+
+.card[data-hoverable='true'] {
+  transition:
+    transform 120ms ease,
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+.card[data-hoverable='true']:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 18%, var(--border));
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+}

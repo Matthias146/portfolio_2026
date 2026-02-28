@@ -2,14 +2,28 @@
   <a
     class="btn"
     [attr.data-variant]="variant()"
+    [attr.data-size]="size()"
+    [attr.data-fullwidth]="fullWidth()"
+    [attr.aria-disabled]="isDisabled()"
+    [attr.data-loading]="loading()"
     [href]="href()"
     [target]="target()"
     [attr.rel]="computedRel()"
+    (click)="isDisabled() && $event.preventDefault()"
   >
-    <ng-content />
+    <span class="btn-spinner" aria-hidden="true"></span>
+    <span class="btn-content"><ng-content /></span>
   </a>
 } @else {
-  <button class="btn" [attr.data-variant]="variant()" [disabled]="disabled()">
-    <ng-content />
+  <button
+    class="btn"
+    [attr.data-variant]="variant()"
+    [attr.data-size]="size()"
+    [attr.data-fullwidth]="fullWidth()"
+    [attr.data-loading]="loading()"
+    [disabled]="isDisabled()"
+  >
+    <span class="btn-spinner" aria-hidden="true"></span>
+    <span class="btn-content"><ng-content /></span>
   </button>
 }

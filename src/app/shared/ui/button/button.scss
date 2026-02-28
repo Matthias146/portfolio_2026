@@ -3,20 +3,24 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 40px;
-  padding: 0 14px;
+
   border-radius: 12px;
   border: 1px solid var(--border);
   text-decoration: none;
+
   font-weight: 650;
-  font-size: 14px;
   cursor: pointer;
   user-select: none;
+
   transition:
     transform 120ms ease,
     background 120ms ease,
     border-color 120ms ease,
     opacity 120ms ease;
+}
+
+.btn[data-fullwidth='true'] {
+  width: 100%;
 }
 
 .btn:hover {
@@ -25,6 +29,25 @@
 
 .btn:active {
   transform: translateY(0);
+}
+
+.btn[data-size='sm'] {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.btn[data-size='md'] {
+  height: 40px;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.btn[data-size='lg'] {
+  height: 46px;
+  padding: 0 16px;
+  font-size: 15px;
+  border-radius: 14px;
 }
 
 .btn[data-variant='primary'] {
@@ -46,8 +69,33 @@
   background: color-mix(in srgb, var(--surface) 80%, transparent);
 }
 
+.btn[data-loading='true'],
 .btn:disabled {
-  opacity: 0.6;
+  opacity: 0.75;
   cursor: not-allowed;
   transform: none;
+}
+
+.btn-spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--text) 30%, transparent);
+  border-top-color: color-mix(in srgb, var(--text) 85%, transparent);
+  display: none;
+  animation: spin 700ms linear infinite;
+}
+
+.btn[data-loading='true'] .btn-spinner {
+  display: inline-block;
+}
+
+.btn[data-loading='true'] .btn-content {
+  opacity: 0.85;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

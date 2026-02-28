@@ -1,0 +1,50 @@
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-top">
+        <ui-badge variant="accent">Angular Developer</ui-badge>
+        <ui-badge>Frontend · TypeScript</ui-badge>
+      </div>
+
+      <h1 class="hero-title">{{ headline() }}</h1>
+      <p class="hero-subtitle">{{ subline() }}</p>
+
+      <div class="hero-ctas">
+        <ui-button [href]="primaryCtaLink()" variant="primary" size="lg">
+          {{ primaryCtaLabel() }}
+        </ui-button>
+
+        <ui-button [href]="secondaryCtaHref()" target="_blank" variant="ghost" size="lg">
+          {{ secondaryCtaLabel() }}
+        </ui-button>
+      </div>
+
+      <div class="hero-pills">
+        @for (p of displayPills(); track p) {
+          <ui-badge variant="soft">{{ p }}</ui-badge>
+        }
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <div class="mock">
+        <div class="mock-head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="mock-title">Portfolio UI</span>
+        </div>
+
+        <div class="mock-body">
+          <div class="mock-row">
+            <div class="mock-card"></div>
+            <div class="mock-card"></div>
+          </div>
+          <div class="mock-wide"></div>
+          <div class="mock-row">
+            <div class="mock-card"></div>
+            <div class="mock-card"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
