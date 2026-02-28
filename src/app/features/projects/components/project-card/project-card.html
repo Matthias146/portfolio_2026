@@ -1,0 +1,24 @@
+<ui-card [title]="project().title" [subtitle]="project().summary" [hoverable]="true">
+  <div class="stack">
+    @for (s of project().stack; track s) {
+      <ui-badge variant="soft">{{ s }}</ui-badge>
+    }
+  </div>
+
+  <ul class="highlights">
+    @for (h of project().highlights; track h) {
+      <li>{{ h }}</li>
+    }
+  </ul>
+
+  <div class="actions">
+    @if (project().liveUrl) {
+      <ui-button [href]="project().liveUrl!" target="_blank" variant="primary" size="sm">
+        Live
+      </ui-button>
+    }
+    <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm">
+      Code
+    </ui-button>
+  </div>
+</ui-card>
