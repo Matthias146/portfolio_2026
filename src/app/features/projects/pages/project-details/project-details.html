@@ -1,1 +1,57 @@
-<p>project-details works!</p>
+@if (project(); as p) {
+  <div class="top">
+    <a class="back" routerLink="/projects">← Back to Projects</a>
+
+    <div class="title-row">
+      <h1 class="title">{{ p.title }}</h1>
+      <div class="actions">
+        @if (p.liveUrl) {
+          <ui-button [href]="p.liveUrl" target="_blank" variant="primary" size="sm">Live</ui-button>
+        }
+        <ui-button [href]="p.repoUrl" target="_blank" variant="ghost" size="sm">Code</ui-button>
+      </div>
+    </div>
+
+    <p class="summary">{{ p.summary }}</p>
+
+    <div class="stack">
+      @for (s of p.stack; track s) {
+        <ui-badge variant="soft">{{ s }}</ui-badge>
+      }
+    </div>
+  </div>
+
+  <ui-section title="Highlights">
+    <ui-card [hoverable]="false">
+      <ul class="highlights">
+        @for (h of p.highlights; track h) {
+          <li>{{ h }}</li>
+        }
+      </ul>
+    </ui-card>
+  </ui-section>
+
+  @if (p.sections?.length) {
+    <ui-section title="Case Study" subtitle="Kurz und konkret: Ziel, Entscheidungen, Learnings.">
+      <div class="case-grid">
+        @for (sec of p.sections!; track sec.title) {
+          <ui-card [title]="sec.title" [hoverable]="true">
+            <p class="body">{{ sec.body }}</p>
+          </ui-card>
+        }
+      </div>
+    </ui-section>
+  }
+} @else {
+  <ui-section
+    title="Project not found"
+    subtitle="Dieses Projekt existiert nicht (oder der Link ist falsch)."
+  >
+    <ui-card>
+      <p class="body">Bitte prüfe die URL oder gehe zurück zur Übersicht.</p>
+      <div style="margin-top: 12px">
+        <ui-button href="/projects" variant="primary">Zur Projektübersicht</ui-button>
+      </div>
+    </ui-card>
+  </ui-section>
+}

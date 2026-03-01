@@ -1,3 +1,22 @@
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 12px;
+}
+
+.proj-title {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.proj-sub {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .stack {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +30,10 @@
   color: var(--muted);
   display: grid;
   gap: 8px;
+
+  li {
+    line-height: 1.35;
+  }
 }
 
 .actions {

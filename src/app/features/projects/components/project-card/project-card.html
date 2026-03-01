@@ -1,4 +1,9 @@
-<ui-card [title]="project().title" [subtitle]="project().summary" [hoverable]="true">
+<ui-card [hoverable]="true">
+  <a class="card-link" [routerLink]="['/projects', project().slug]">
+    <h3 class="proj-title">{{ project().title }}</h3>
+    <p class="proj-sub">{{ project().summary }}</p>
+  </a>
+
   <div class="stack">
     @for (s of project().stack; track s) {
       <ui-badge variant="soft">{{ s }}</ui-badge>
@@ -13,12 +18,10 @@
 
   <div class="actions">
     @if (project().liveUrl) {
-      <ui-button [href]="project().liveUrl!" target="_blank" variant="primary" size="sm">
-        Live
-      </ui-button>
+      <ui-button [href]="project().liveUrl!" target="_blank" variant="primary" size="sm"
+        >Live</ui-button
+      >
     }
-    <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm">
-      Code
-    </ui-button>
+    <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm">Code</ui-button>
   </div>
 </ui-card>

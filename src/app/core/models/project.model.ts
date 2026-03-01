@@ -15,4 +15,5 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   tags: ProjectTag[];
+  sections?: ProjectSection[];
 }

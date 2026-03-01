@@ -11,6 +11,20 @@ export const PROJECTS: Project[] = [
     liveUrl: 'https://<dein-live-link>/kanban',
     featured: true,
     tags: ['angular', 'ui'],
+    sections: [
+      {
+        title: 'Ziel',
+        body: 'Eine strukturierte Task-App, die zeigt, wie ich State, UI und Architektur in Angular aufbaue.',
+      },
+      {
+        title: 'Technische Entscheidungen',
+        body: 'Signals für UI-State, feature-orientierte Struktur, wiederverwendbare UI-Komponenten, klare Router-Struktur.',
+      },
+      {
+        title: 'Learnings',
+        body: 'State-Flow sauber halten, UI-States konsequent abbilden (loading/error/empty) und Layout als AppShell denken.',
+      },
+    ],
   },
   {
     slug: 'api-explorer',
