@@ -1,3 +1,5 @@
+export type ProjectTag = 'angular' | 'api' | 'auth' | 'fullstack' | 'ui';
+
 export interface Project {
   slug: string;
   title: string;
@@ -7,4 +9,5 @@ export interface Project {
   repoUrl: string;
   liveUrl?: string;
   featured: boolean;
+  tags: ProjectTag[];
 }

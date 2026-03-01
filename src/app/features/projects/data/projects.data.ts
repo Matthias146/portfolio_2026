@@ -10,6 +10,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/<dein-user>/kanban-angular',
     liveUrl: 'https://<dein-live-link>/kanban',
     featured: true,
+    tags: ['angular', 'ui'],
   },
   {
     slug: 'api-explorer',
@@ -20,6 +21,7 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/<dein-user>/api-explorer-angular',
     liveUrl: 'https://<dein-live-link>/api-explorer',
     featured: true,
+    tags: ['angular', 'api'],
   },
   {
     slug: 'auth-dashboard',
@@ -29,5 +31,6 @@ export const PROJECTS: Project[] = [
     highlights: ['Auth Flow', 'Route Guards', 'Modulare Feature-Struktur'],
     repoUrl: 'https://github.com/<dein-user>/auth-dashboard-angular',
     featured: true,
+    tags: ['angular', 'auth'],
   },
 ];
