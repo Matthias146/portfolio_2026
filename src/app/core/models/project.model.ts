@@ -1,5 +1,10 @@
 export type ProjectTag = 'angular' | 'api' | 'auth' | 'fullstack' | 'ui';
 
+export interface ProjectSection {
+  title: string;
+  body: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
