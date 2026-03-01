@@ -1,1 +1,41 @@
-<p>projects works!</p>
+<ui-section
+  title="Projects"
+  subtitle="Übersicht meiner Projekte — filterbar nach Fokus (Angular, API, Auth, UI)."
+>
+  <div class="toolbar">
+    <div class="filters">
+      @for (f of filters; track f.key) {
+        <button
+          class="chip"
+          [attr.data-active]="filter() === f.key"
+          (click)="setFilter(f.key)"
+          type="button"
+        >
+          {{ f.label }}
+        </button>
+      }
+    </div>
+
+    <div class="search">
+      <ui-input
+        [value]="query()"
+        placeholder="Search projects…"
+        ariaLabel="Search projects"
+        (valueChange)="setQuery($event)"
+      />
+    </div>
+  </div>
+
+  @if (projects().length === 0) {
+    <div class="empty">
+      <ui-badge>No results</ui-badge>
+      <p>Try another filter or search term.</p>
+    </div>
+  } @else {
+    <div class="grid">
+      @for (p of projects(); track p.slug) {
+        <app-project-card [project]="p" />
+      }
+    </div>
+  }
+</ui-section>
