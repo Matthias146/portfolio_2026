@@ -1,8 +1,36 @@
-.card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 12px;
+.card-body {
+  position: relative;
+}
+
+.stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.proj-title,
+.proj-sub,
+.stack,
+.highlights {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.actions {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-body:hover {
+  cursor: pointer;
 }
 
 .proj-title {
@@ -21,7 +49,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 12px;
+  margin: 12px 0;
 }
 
 .highlights {
@@ -34,11 +62,4 @@
   li {
     line-height: 1.35;
   }
-}
-
-.actions {
-  margin-top: 14px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
 }
