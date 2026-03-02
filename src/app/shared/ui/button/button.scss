@@ -103,3 +103,8 @@
 .btn[aria-disabled='true'] {
   pointer-events: none;
 }
+
+.btn ui-icon,
+.btn svg {
+  display: inline-flex;
+}
