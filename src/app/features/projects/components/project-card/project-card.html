@@ -1,5 +1,5 @@
 <ui-card [hoverable]="true">
-  <div class="card-body">
+  <div class="card-wrap">
     <a class="stretched-link" [routerLink]="['/projects', project().slug]">
       {{ project().title }}
     </a>
@@ -25,9 +25,10 @@
           Live
         </ui-button>
       }
-      <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm"
-        >Code</ui-button
-      >
+      <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm">
+        <ui-icon name="github" />
+        GitHub
+      </ui-button>
     </div>
   </div>
 </ui-card>

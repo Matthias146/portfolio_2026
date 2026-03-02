@@ -1,4 +1,4 @@
-.card-body {
+.card-wrap {
   position: relative;
 }
 
@@ -29,37 +29,6 @@
   flex-wrap: wrap;
 }
 
-.card-body:hover {
+.card-wrap:hover {
   cursor: pointer;
-}
-
-.proj-title {
-  margin: 0;
-  font-size: 16px;
-  letter-spacing: 0.2px;
-}
-
-.proj-sub {
-  margin: 8px 0 0;
-  color: var(--muted);
-  line-height: 1.45;
-}
-
-.stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 12px 0;
-}
-
-.highlights {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-  display: grid;
-  gap: 8px;
-
-  li {
-    line-height: 1.35;
-  }
 }

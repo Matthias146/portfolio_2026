@@ -1,3 +1,4 @@
+import { NgTemplateOutlet } from '@angular/common';
 import { booleanAttribute, Component, computed, input } from '@angular/core';
 export type ButtonVariant = 'primary' | 'ghost';
 export type ButtonTarget = '_blank' | '_self';
@@ -5,7 +6,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 
 @Component({
   selector: 'ui-button',
-  imports: [],
+  imports: [NgTemplateOutlet],
   templateUrl: './button.html',
   styleUrl: './button.scss',
 })

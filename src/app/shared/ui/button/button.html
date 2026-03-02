@@ -1,3 +1,9 @@
+<!-- content fragment: exactly one ng-content -->
+<ng-template #content>
+  <span class="btn-spinner" aria-hidden="true"></span>
+  <span class="btn-content"><ng-content /></span>
+</ng-template>
+
 @if (href()) {
   <a
     class="btn"
@@ -10,8 +16,7 @@
     [target]="target()"
     [attr.rel]="computedRel()"
   >
-    <span class="btn-spinner" aria-hidden="true"></span>
-    <span class="btn-content"><ng-content /></span>
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
   </a>
 } @else {
   <button
@@ -21,8 +26,8 @@
     [attr.data-fullwidth]="fullWidth()"
     [attr.data-loading]="loading()"
     [disabled]="isDisabled()"
+    type="button"
   >
-    <span class="btn-spinner" aria-hidden="true"></span>
-    <span class="btn-content"><ng-content /></span>
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
   </button>
 }

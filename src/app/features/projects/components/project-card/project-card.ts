@@ -4,10 +4,11 @@ import { Card } from '../../../../shared/ui/card/card';
 import { Badge } from '../../../../shared/ui/badge/badge';
 import { Button } from '../../../../shared/ui/button/button';
 import { RouterLink } from '@angular/router';
+import { Icon } from '../../../../shared/ui/icon/icon';
 
 @Component({
   selector: 'app-project-card',
-  imports: [Card, Badge, Button, RouterLink],
+  imports: [Card, Badge, Button, RouterLink, Icon],
   templateUrl: './project-card.html',
   styleUrl: './project-card.scss',
 })

@@ -43,6 +43,7 @@ export const PROJECTS: Project[] = [
     summary: 'Login/Register Flow mit Guards und einer strukturierten AppShell.',
     stack: ['Angular', 'Routing', 'Guards', 'TypeScript', 'SCSS'],
     highlights: ['Auth Flow', 'Route Guards', 'Modulare Feature-Struktur'],
+    liveUrl: 'https://<dein-live-link>/api-explorer',
     repoUrl: 'https://github.com/<dein-user>/auth-dashboard-angular',
     featured: true,
     tags: ['angular', 'auth'],
