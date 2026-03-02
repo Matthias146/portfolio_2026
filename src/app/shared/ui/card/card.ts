@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { booleanAttribute, Component, input } from '@angular/core';
 
 @Component({
   selector: 'ui-card',
@@ -9,5 +9,5 @@ import { Component, input } from '@angular/core';
 export class Card {
   title = input<string | undefined>(undefined);
   subtitle = input<string | undefined>(undefined);
-  hoverable = input<boolean>(false);
+  hoverable = input(false, { transform: booleanAttribute });
 }
