@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     stack: ['Angular', 'Signals', 'TypeScript', 'SCSS', 'CDK'],
     highlights: ['Drag & Drop', 'Spalten & Tasks', 'Persistenz (LocalStorage)'],
     repoUrl: 'https://github.com/',
-    liveUrl: 'https://matthias.hammelehle.dev/',
+    liveUrl: 'https://matthias-hammelehle.dev/',
     featured: true,
     tags: ['angular', 'ui'],
     sections: [

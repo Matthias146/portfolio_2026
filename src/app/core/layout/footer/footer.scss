@@ -12,3 +12,17 @@
   gap: 12px;
   flex-wrap: wrap;
 }
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+
+  a {
+    color: var(--muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+}

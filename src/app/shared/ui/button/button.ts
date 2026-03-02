@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { booleanAttribute, Component, computed, input } from '@angular/core';
 export type ButtonVariant = 'primary' | 'ghost';
 export type ButtonTarget = '_blank' | '_self';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -17,9 +17,9 @@ export class Button {
   target = input<ButtonTarget>('_self');
   rel = input<string | undefined>(undefined);
 
-  fullWidth = input<boolean>(false);
-  disabled = input<boolean>(false);
-  loading = input<boolean>(false);
+  fullWidth = input(false, { transform: booleanAttribute });
+  disabled = input(false, { transform: booleanAttribute });
+  loading = input(false, { transform: booleanAttribute });
 
   isDisabled = computed(() => this.disabled() || this.loading());
 
