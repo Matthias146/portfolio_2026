@@ -99,3 +99,7 @@
     transform: rotate(360deg);
   }
 }
+
+.btn[aria-disabled='true'] {
+  pointer-events: none;
+}

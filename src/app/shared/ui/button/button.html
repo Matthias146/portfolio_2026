@@ -9,7 +9,6 @@
     [href]="href()"
     [target]="target()"
     [attr.rel]="computedRel()"
-    (click)="isDisabled() && $event.preventDefault()"
   >
     <span class="btn-spinner" aria-hidden="true"></span>
     <span class="btn-content"><ng-content /></span>
