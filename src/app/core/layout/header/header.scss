@@ -42,3 +42,9 @@
     }
   }
 }
+
+.nav a.active {
+  color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}

@@ -7,8 +7,8 @@ export const PROJECTS: Project[] = [
     summary: 'Task-Management App mit Fokus auf Struktur, UI-State und sauberem Datenfluss.',
     stack: ['Angular', 'Signals', 'TypeScript', 'SCSS', 'CDK'],
     highlights: ['Drag & Drop', 'Spalten & Tasks', 'Persistenz (LocalStorage)'],
-    repoUrl: 'https://github.com/<dein-user>/kanban-angular',
-    liveUrl: 'https://<dein-live-link>/kanban',
+    repoUrl: 'https://github.com/',
+    liveUrl: 'https://matthias.hammelehle.dev/',
     featured: true,
     tags: ['angular', 'ui'],
     sections: [
