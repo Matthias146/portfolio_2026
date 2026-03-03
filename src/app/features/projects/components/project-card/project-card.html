@@ -2,6 +2,16 @@
   <div class="card-wrap">
     @if (project().coverImage) {
       <img class="cover" [src]="project().coverImage" [alt]="project().title + ' preview'" />
+    } @else {
+      <div class="cover cover--fallback" aria-hidden="true">
+        <div class="cover__badge">Angular</div>
+        <div class="cover__title">{{ project().title }}</div>
+        <div class="cover__meta">
+          @for (s of project().stack.slice(0, 3); track s) {
+            <span class="cover__pill">{{ s }}</span>
+          }
+        </div>
+      </div>
     }
     <a class="stretched-link" [routerLink]="['/projects', project().slug]">
       {{ project().title }}

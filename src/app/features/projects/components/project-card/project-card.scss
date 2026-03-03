@@ -36,9 +36,58 @@
 .cover {
   width: 100%;
   height: 170px;
-  object-fit: cover;
   border-radius: 12px;
   border: 1px solid var(--border);
   margin-bottom: 12px;
   display: block;
+}
+
+.cover--fallback {
+  display: grid;
+  align-content: end;
+  padding: 14px;
+  gap: 10px;
+
+  background:
+    radial-gradient(
+      600px 220px at 20% 10%,
+      color-mix(in srgb, var(--accent) 28%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      500px 200px at 80% 20%,
+      color-mix(in srgb, var(--accent-2) 22%, transparent),
+      transparent 55%
+    ),
+    color-mix(in srgb, var(--surface-2) 92%, transparent);
+}
+
+.cover__badge {
+  justify-self: start;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: color-mix(in srgb, var(--accent) 92%, white);
+}
+
+.cover__title {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.cover__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cover__pill {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  color: var(--muted);
 }
