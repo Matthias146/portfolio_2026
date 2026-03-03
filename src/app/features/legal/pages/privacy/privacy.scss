@@ -1,0 +1,151 @@
+.privacy {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.privacy__header {
+  margin-bottom: 16px;
+}
+
+.privacy__title {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+}
+
+.privacy__subtitle {
+  margin: 10px 0 0;
+  color: var(--muted);
+  max-width: 80ch;
+}
+
+.privacy__grid {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.privacy__card,
+.privacy__content {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 8px);
+  padding: 16px;
+  min-width: 0;
+}
+
+.privacy__h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.privacy__h3 {
+  margin: 18px 0 8px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: color-mix(in srgb, var(--text) 92%, transparent);
+}
+
+.privacy__section p {
+  margin: 10px 0;
+  color: color-mix(in srgb, var(--text) 86%, transparent);
+  max-width: 85ch;
+  line-height: 1.75;
+}
+
+.privacy__muted {
+  color: var(--muted);
+}
+
+.privacy__dl {
+  margin: 0 0 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.privacy__row {
+  display: grid;
+  grid-template-columns: minmax(110px, 140px) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.privacy__row dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.privacy__row dd {
+  margin: 0;
+  color: color-mix(in srgb, var(--text) 90%, transparent);
+}
+
+.privacy__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  background: color-mix(in srgb, var(--surface-2) 82%, transparent);
+
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 120ms ease,
+    background 120ms ease,
+    border-color 120ms ease;
+}
+
+.privacy__chip:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--surface-2) 70%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 20%, var(--border));
+}
+
+.privacy a {
+  color: color-mix(in srgb, var(--accent) 92%, white);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  transition:
+    opacity 120ms ease,
+    border-color 120ms ease;
+}
+
+.privacy a:hover {
+  opacity: 0.95;
+  border-bottom-color: color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.privacy__callout {
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+
+.privacy__footer {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.privacy__card a,
+.privacy__row dd {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .privacy__grid {
+    grid-template-columns: 1fr;
+  }
+}

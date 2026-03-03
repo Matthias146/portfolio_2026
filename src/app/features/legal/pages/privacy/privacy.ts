@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './privacy.html',
   styleUrl: './privacy.scss',
 })
-export class Privacy {}
+export class Privacy {
+  today = new Date().toLocaleDateString('de-DE');
+}

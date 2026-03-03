@@ -1,1 +1,125 @@
-<p>privacy works!</p>
+<section class="privacy">
+  <header class="privacy__header">
+    <h1 class="privacy__title">Datenschutzerklärung</h1>
+    <p class="privacy__subtitle">
+      Informationen zur Verarbeitung personenbezogener Daten beim Besuch dieser Website gemäß DSGVO.
+    </p>
+  </header>
+
+  <div class="privacy__grid">
+    <section class="privacy__card" aria-labelledby="privacy-facts">
+      <h2 id="privacy-facts" class="privacy__h2">Kurz &amp; Klar</h2>
+
+      <dl class="privacy__dl">
+        <div class="privacy__row">
+          <dt>Verantwortlicher</dt>
+          <dd>Matthias Hammelehle</dd>
+        </div>
+
+        <div class="privacy__row">
+          <dt>Kontakt</dt>
+          <dd>
+            <a class="privacy__chip" href="mailto:mahammelehle@outlook.de"
+              >✉️ mahammelehle&#64;<wbr />outlook.de</a
+            >
+          </dd>
+        </div>
+
+        <div class="privacy__row">
+          <dt>Zweck</dt>
+          <dd>Bereitstellung der Website &amp; Kontaktaufnahme</dd>
+        </div>
+
+        <div class="privacy__row">
+          <dt>Rechtsgrundlagen</dt>
+          <dd>Art. 6 Abs. 1 lit. f DSGVO / ggf. Art. 6 Abs. 1 lit. b DSGVO</dd>
+        </div>
+      </dl>
+
+      <p class="privacy__muted">
+        Hinweis: Diese Seite kann je nach Hosting/Tools (z. B. Analytics) ergänzt werden.
+      </p>
+    </section>
+
+    <section class="privacy__content" aria-labelledby="privacy-content">
+      <h2 id="privacy-content" class="privacy__h2">Details</h2>
+
+      <section class="privacy__section" aria-labelledby="privacy-general">
+        <h3 id="privacy-general" class="privacy__h3">1. Allgemeine Hinweise</h3>
+        <p>
+          Diese Datenschutzerklärung informiert darüber, welche personenbezogenen Daten beim Besuch
+          dieser Website verarbeitet werden und zu welchen Zwecken dies geschieht. Personenbezogene
+          Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+        </p>
+      </section>
+
+      <section class="privacy__section" aria-labelledby="privacy-controller">
+        <h3 id="privacy-controller" class="privacy__h3">2. Verantwortlicher</h3>
+        <p>
+          Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+          <b>Matthias Hammelehle</b> (Kontakt siehe „Kurz &amp; Klar“).
+        </p>
+      </section>
+
+      <section class="privacy__section" aria-labelledby="privacy-hosting">
+        <h3 id="privacy-hosting" class="privacy__h3">3. Hosting &amp; Server-Logfiles</h3>
+        <p>
+          Beim Aufruf dieser Website können durch den Hosting-Provider automatisch Informationen in
+          sogenannten Server-Logfiles erhoben und gespeichert werden (z. B. IP-Adresse,
+          Datum/Uhrzeit, aufgerufene Seiten, Browser, Betriebssystem, Referrer-URL).
+        </p>
+        <p class="privacy__callout">
+          Die Verarbeitung erfolgt in der Regel auf Grundlage von <b>Art. 6 Abs. 1 lit. f DSGVO</b>
+          (berechtigtes Interesse an der sicheren und stabilen Bereitstellung der Website).
+        </p>
+      </section>
+
+      <section class="privacy__section" aria-labelledby="privacy-contact">
+        <h3 id="privacy-contact" class="privacy__h3">4. Kontaktaufnahme</h3>
+        <p>
+          Wenn Sie mich per E-Mail kontaktieren, werden die von Ihnen übermittelten Daten (z. B.
+          E-Mail-Adresse und Inhalt der Nachricht) zum Zweck der Bearbeitung der Anfrage
+          verarbeitet.
+        </p>
+        <p>
+          Rechtsgrundlage ist je nach Kontext <b>Art. 6 Abs. 1 lit. b DSGVO</b> (Vertrag/Anbahnung)
+          oder <b>Art. 6 Abs. 1 lit. f DSGVO</b> (berechtigtes Interesse an der Kommunikation).
+        </p>
+      </section>
+
+      <section class="privacy__section" aria-labelledby="privacy-cookies">
+        <h3 id="privacy-cookies" class="privacy__h3">5. Cookies / Local Storage</h3>
+        <p>
+          Diese Website kann technisch notwendige Speichermechanismen nutzen (z. B. Local Storage) –
+          beispielsweise für Theme-Einstellungen. Eine Nutzung zu Tracking-Zwecken erfolgt nur, wenn
+          dies ausdrücklich eingebunden und hier dokumentiert wird.
+        </p>
+      </section>
+
+      <section class="privacy__section" aria-labelledby="privacy-rights">
+        <h3 id="privacy-rights" class="privacy__h3">6. Ihre Rechte</h3>
+        <p>
+          Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf Auskunft,
+          Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie
+          Widerspruch gegen die Verarbeitung Ihrer Daten.
+        </p>
+        <p>Zudem besteht ein Beschwerderecht bei einer Aufsichtsbehörde.</p>
+      </section>
+
+      <section class="privacy__section" aria-labelledby="privacy-security">
+        <h3 id="privacy-security" class="privacy__h3">7. Datensicherheit</h3>
+        <p>
+          Ich setze geeignete technische und organisatorische Maßnahmen ein, um Ihre Daten gegen
+          zufällige oder vorsätzliche Manipulationen, teilweisen oder vollständigen Verlust sowie
+          gegen unbefugten Zugriff zu schützen.
+        </p>
+      </section>
+
+      <footer class="privacy__footer">
+        <p class="privacy__muted">
+          Stand: <span>{{ today }}</span>
+        </p>
+      </footer>
+    </section>
+  </div>
+</section>
