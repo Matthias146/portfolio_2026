@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-export type IconName = 'github' | 'external';
+export type IconName = 'github' | 'external' | 'angular' | 'ts' | 'ui' | 'git';
 
 @Component({
   selector: 'ui-icon',
