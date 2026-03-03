@@ -21,6 +21,10 @@
   display: grid;
   place-items: center;
   color: var(--text);
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    border-color 120ms ease;
 }
 
 .icon[data-tone='angular'] {
@@ -77,12 +81,19 @@
 
 .also-label {
   font-size: 13px;
+  letter-spacing: 0.2px;
 }
 
 .also-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  opacity: 0.9;
+}
+
+.ui-card:hover .icon {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 900px) {

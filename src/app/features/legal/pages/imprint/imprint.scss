@@ -1,0 +1,164 @@
+.imprint {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.imprint__header {
+  margin-bottom: 16px;
+}
+
+.imprint__title {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+}
+
+.imprint__subtitle {
+  margin: 10px 0 0;
+  color: var(--muted);
+  max-width: 80ch;
+}
+
+.imprint__grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.imprint__card {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 8px);
+  padding: 16px;
+}
+
+.imprint__content {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 8px);
+  padding: 16px;
+}
+
+.imprint__h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.imprint__h3 {
+  margin: 18px 0 8px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: color-mix(in srgb, var(--text) 92%, transparent);
+}
+
+.imprint__section p {
+  margin: 10px 0;
+  color: color-mix(in srgb, var(--text) 86%, transparent);
+  max-width: 85ch;
+  line-height: 1.75;
+}
+
+.imprint__muted {
+  color: var(--muted);
+}
+
+.imprint__dl {
+  margin: 0 0 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.imprint__row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+}
+
+.imprint__row dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.imprint__row dd {
+  margin: 0;
+  color: color-mix(in srgb, var(--text) 90%, transparent);
+}
+
+.imprint__address {
+  font-style: normal;
+}
+
+.imprint__address p {
+  margin: 6px 0;
+  color: color-mix(in srgb, var(--text) 86%, transparent);
+}
+
+.imprint__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.imprint__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  background: color-mix(in srgb, var(--surface-2) 82%, transparent);
+
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 120ms ease,
+    background 120ms ease,
+    border-color 120ms ease;
+}
+
+.imprint__chip:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--surface-2) 70%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 20%, var(--border));
+}
+
+.imprint a {
+  color: color-mix(in srgb, var(--accent) 92%, white);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  transition:
+    opacity 120ms ease,
+    border-color 120ms ease;
+}
+
+.imprint a:hover {
+  opacity: 0.95;
+  border-bottom-color: color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.imprint__callout {
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+
+.imprint__footer {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .imprint__grid {
+    grid-template-columns: 1fr;
+  }
+}
