@@ -1,4 +1,6 @@
 @if (project(); as p) {
+  <a class="back" routerLink="/projects">← Back to Projects</a>
+
   @if (shots().length) {
     <div class="shots">
       @for (src of shots(); track src) {
@@ -17,8 +19,6 @@
     </div>
   }
   <div class="top">
-    <a class="back" routerLink="/projects">← Back to Projects</a>
-
     <div class="title-row">
       <h1 class="title">{{ p.title }}</h1>
       <div class="actions">

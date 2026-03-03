@@ -1,0 +1,35 @@
+<ui-section
+  title="Skills"
+  subtitle="Fokus auf moderne Angular-Entwicklung, saubere Architektur und UI, die wie ein Produkt wirkt."
+>
+  <div class="grid">
+    @for (c of cards; track c.title) {
+      <ui-card [hoverable]="true">
+        <div class="card-head">
+          <div class="icon">
+            <ui-icon [name]="c.icon" [size]="18"></ui-icon>
+          </div>
+          <div class="texts">
+            <h3 class="title">{{ c.title }}</h3>
+            <p class="sub">{{ c.subtitle }}</p>
+          </div>
+        </div>
+
+        <div class="pills">
+          @for (p of c.pills; track p) {
+            <ui-badge variant="soft">{{ p }}</ui-badge>
+          }
+        </div>
+      </ui-card>
+    }
+  </div>
+
+  <div class="also">
+    <span class="also-label">Also familiar with:</span>
+    <div class="also-badges">
+      @for (a of also; track a) {
+        <ui-badge>{{ a }}</ui-badge>
+      }
+    </div>
+  </div>
+</ui-section>
