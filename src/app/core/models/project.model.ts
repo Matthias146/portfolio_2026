@@ -16,4 +16,6 @@ export interface Project {
   featured: boolean;
   tags: ProjectTag[];
   sections?: ProjectSection[];
+  coverImage?: string;
+  screenshots?: string[];
 }

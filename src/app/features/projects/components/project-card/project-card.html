@@ -1,5 +1,8 @@
 <ui-card [hoverable]="true">
   <div class="card-wrap">
+    @if (project().coverImage) {
+      <img class="cover" [src]="project().coverImage" [alt]="project().title + ' preview'" />
+    }
     <a class="stretched-link" [routerLink]="['/projects', project().slug]">
       {{ project().title }}
     </a>
@@ -22,7 +25,7 @@
     <div class="actions">
       @if (project().liveUrl) {
         <ui-button [href]="project().liveUrl" target="_blank" variant="primary" size="sm">
-          Live
+          Live <ui-icon name="external" />
         </ui-button>
       }
       <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm">

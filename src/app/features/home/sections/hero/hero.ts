@@ -1,10 +1,11 @@
 import { Component, computed, input } from '@angular/core';
 import { Badge } from '../../../../shared/ui/badge/badge';
 import { Button } from '../../../../shared/ui/button/button';
+import { Icon } from '../../../../shared/ui/icon/icon';
 
 @Component({
   selector: 'app-hero',
-  imports: [Badge, Button],
+  imports: [Badge, Button, Icon],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
