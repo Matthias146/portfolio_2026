@@ -20,6 +20,31 @@
   background: color-mix(in srgb, var(--surface-2) 85%, transparent);
   display: grid;
   place-items: center;
+  color: var(--text);
+}
+
+.icon[data-tone='angular'] {
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: color-mix(in srgb, var(--accent) 92%, white);
+}
+
+.icon[data-tone='ts'] {
+  border-color: color-mix(in srgb, var(--accent-2) 28%, var(--border));
+  background: color-mix(in srgb, var(--accent-2) 12%, var(--surface));
+  color: color-mix(in srgb, var(--accent-2) 92%, white);
+}
+
+.icon[data-tone='ui'] {
+  border-color: color-mix(in srgb, #a78bfa 28%, var(--border));
+  background: color-mix(in srgb, #a78bfa 12%, var(--surface));
+  color: color-mix(in srgb, #a78bfa 92%, white);
+}
+
+.icon[data-tone='git'] {
+  border-color: color-mix(in srgb, #f97316 26%, var(--border));
+  background: color-mix(in srgb, #f97316 10%, var(--surface));
+  color: color-mix(in srgb, #f97316 92%, white);
 }
 
 .title {

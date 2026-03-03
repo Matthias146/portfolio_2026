@@ -6,7 +6,7 @@
     @for (c of cards; track c.title) {
       <ui-card [hoverable]="true">
         <div class="card-head">
-          <div class="icon">
+          <div class="icon" [attr.data-tone]="c.icon">
             <ui-icon [name]="c.icon" [size]="18"></ui-icon>
           </div>
           <div class="texts">
