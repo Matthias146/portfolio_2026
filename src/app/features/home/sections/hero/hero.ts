@@ -1,11 +1,10 @@
 import { Component, computed, input } from '@angular/core';
 import { Badge } from '../../../../shared/ui/badge/badge';
 import { Button } from '../../../../shared/ui/button/button';
-import { Icon } from '../../../../shared/ui/icon/icon';
 
 @Component({
   selector: 'app-hero',
-  imports: [Badge, Button, Icon],
+  imports: [Badge, Button],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
@@ -16,6 +15,10 @@ export class Hero {
     'Fokus auf Signals, Standalone-Architektur, sauberen State-Flow und UI, die wie ein Produkt wirkt.',
   );
 
+  avatarUrl = input<string>('/assets/images/profile/avatar.png');
+  initials = input<string>('MH');
+  role = input<string>('Junior Frontend Developer · Angular');
+
   primaryCtaLabel = input<string>('Projekte ansehen');
   primaryCtaLink = input<string>('/projects');
 
@@ -25,4 +28,6 @@ export class Hero {
   pills = input<string[]>(['Angular', 'Signals', 'TypeScript', 'SCSS']);
 
   displayPills = computed(() => this.pills().slice(0, 4));
+
+  currentFocus = input<string>('Portfolio 2026 · Angular UI Components · Case Studies');
 }

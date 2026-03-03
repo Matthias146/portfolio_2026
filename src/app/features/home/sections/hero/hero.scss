@@ -4,7 +4,7 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 24px;
   align-items: center;
 }
@@ -14,6 +14,26 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 14px;
+}
+
+.hero-intro {
+  margin: 10px 0 10px;
+}
+
+.hero-kicker {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hero-name {
+  color: var(--text);
+  font-weight: 850;
+}
+
+.hero-role {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .hero-title {
@@ -27,6 +47,18 @@
   margin: 14px 0 0;
   color: var(--muted);
   max-width: 70ch;
+}
+
+.hero-now {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.hero-now-text {
+  line-height: 1.35;
 }
 
 .hero-ctas {
@@ -48,59 +80,64 @@
   justify-content: flex-end;
 }
 
-.mock {
+.portrait-card {
+  position: relative;
   width: min(420px, 100%);
-  border-radius: calc(var(--radius) + 6px);
+  aspect-ratio: 4 / 5;
+  border-radius: calc(var(--radius) + 10px);
   border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
   overflow: hidden;
+  background: color-mix(in srgb, var(--surface-2) 92%, transparent);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
 }
 
-.mock-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface-2) 80%, transparent);
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
+.portrait-fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 54px;
+  letter-spacing: 1px;
+  color: var(--text);
+  background:
+    radial-gradient(
+      900px 380px at 20% 10%,
+      color-mix(in srgb, var(--accent) 26%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      700px 300px at 80% 10%,
+      color-mix(in srgb, var(--accent-2) 20%, transparent),
+      transparent 55%
+    ),
+    color-mix(in srgb, var(--surface-2) 92%, transparent);
 }
 
-.mock-title {
-  margin-left: 8px;
-  color: var(--muted);
+.portrait-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 14px 14px 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+}
+
+.portrait-title {
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.portrait-sub {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 13px;
-}
-
-.mock-body {
-  padding: 14px;
-  display: grid;
-  gap: 12px;
-}
-
-.mock-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.mock-card,
-.mock-wide {
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface-2) 75%, transparent);
-  min-height: 86px;
-}
-
-.mock-wide {
-  min-height: 110px;
 }
 
 @media (max-width: 900px) {
@@ -110,5 +147,9 @@
 
   .hero-right {
     justify-content: flex-start;
+  }
+
+  .portrait-card {
+    width: min(520px, 100%);
   }
 }

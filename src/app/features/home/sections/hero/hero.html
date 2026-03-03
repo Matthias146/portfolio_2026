@@ -3,11 +3,23 @@
     <div class="hero-left">
       <div class="hero-top">
         <ui-badge variant="accent">Angular Developer</ui-badge>
-        <ui-badge>Frontend · TypeScript</ui-badge>
+        <ui-badge>Germany · Remote/On-site</ui-badge>
+      </div>
+
+      <div class="hero-intro">
+        <p class="hero-kicker">
+          Hi, ich bin <span class="hero-name">{{ name() }}</span> 👋
+        </p>
+        <p class="hero-role">{{ role() }}</p>
       </div>
 
       <h1 class="hero-title">{{ headline() }}</h1>
       <p class="hero-subtitle">{{ subline() }}</p>
+
+      <div class="hero-now">
+        <ui-badge variant="soft">Currently building</ui-badge>
+        <span class="hero-now-text">{{ currentFocus() }}</span>
+      </div>
 
       <div class="hero-ctas">
         <ui-button [href]="primaryCtaLink()" variant="primary" size="lg">
@@ -15,8 +27,7 @@
         </ui-button>
 
         <ui-button [href]="secondaryCtaHref()" target="_blank" variant="ghost" size="lg">
-          <ui-icon name="github" />
-          {{ secondaryCtaLabel() }}
+          GitHub
         </ui-button>
       </div>
 
@@ -28,22 +39,16 @@
     </div>
 
     <div class="hero-right" aria-hidden="true">
-      <div class="mock">
-        <div class="mock-head">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="mock-title">Portfolio UI</span>
-        </div>
+      <div class="portrait-card">
+        @if (avatarUrl()) {
+          <img class="portrait-img" [src]="avatarUrl()" [alt]="name() + ' portrait'" />
+        } @else {
+          <div class="portrait-fallback">{{ initials() }}</div>
+        }
 
-        <div class="mock-body">
-          <div class="mock-row">
-            <div class="mock-card"></div>
-            <div class="mock-card"></div>
-          </div>
-          <div class="mock-wide"></div>
-          <div class="mock-row">
-            <div class="mock-card"></div>
-            <div class="mock-card"></div>
-          </div>
+        <div class="portrait-overlay">
+          <div class="portrait-title">{{ name() }}</div>
+          <div class="portrait-sub">{{ role() }}</div>
         </div>
       </div>
     </div>
