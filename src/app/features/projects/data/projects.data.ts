@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     coverImage: '',
-    screenshots: ['', ''],
+    screenshots: [],
   },
   {
     slug: 'api-explorer',
@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     coverImage: '',
-    screenshots: ['', ''],
+    screenshots: [],
   },
   {
     slug: 'auth-dashboard',
@@ -80,6 +80,6 @@ export const PROJECTS: Project[] = [
       },
     ],
     coverImage: '',
-    screenshots: ['', ''],
+    screenshots: [],
   },
 ];

@@ -7,10 +7,11 @@ import { Button } from '../../../../shared/ui/button/button';
 import { Badge } from '../../../../shared/ui/badge/badge';
 import { Section } from '../../../../shared/ui/section/section';
 import { Card } from '../../../../shared/ui/card/card';
+import { Icon } from '../../../../shared/ui/icon/icon';
 
 @Component({
   selector: 'app-project-details',
-  imports: [RouterLink, Button, Badge, Section, Card],
+  imports: [RouterLink, Button, Badge, Section, Card, Icon],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })
@@ -25,5 +26,11 @@ export class ProjectDetails {
     const s = this.slug().get('slug');
     if (!s) return null;
     return PROJECTS.find((p) => p.slug === s) ?? null;
+  });
+
+  shots = computed(() => {
+    const p = this.project();
+    if (!p?.screenshots) return [];
+    return p.screenshots.map((s) => s.trim()).filter(Boolean);
   });
 }

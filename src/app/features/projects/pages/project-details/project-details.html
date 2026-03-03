@@ -1,4 +1,21 @@
 @if (project(); as p) {
+  @if (shots().length) {
+    <div class="shots">
+      @for (src of shots(); track src) {
+        <img class="shot" [src]="src" [alt]="p.title + ' screenshot'" loading="lazy" />
+      }
+    </div>
+  } @else {
+    <div class="detail-cover" aria-hidden="true">
+      <div class="detail-cover__badge">Case Study</div>
+      <div class="detail-cover__title">{{ p.title }}</div>
+      <div class="detail-cover__meta">
+        @for (s of p.stack.slice(0, 5); track s) {
+          <span class="detail-cover__pill">{{ s }}</span>
+        }
+      </div>
+    </div>
+  }
   <div class="top">
     <a class="back" routerLink="/projects">← Back to Projects</a>
 
@@ -6,9 +23,13 @@
       <h1 class="title">{{ p.title }}</h1>
       <div class="actions">
         @if (p.liveUrl) {
-          <ui-button [href]="p.liveUrl" target="_blank" variant="primary" size="sm">Live</ui-button>
+          <ui-button [href]="p.liveUrl" target="_blank" variant="primary" size="sm"
+            >Live <ui-icon name="external"
+          /></ui-button>
         }
-        <ui-button [href]="p.repoUrl" target="_blank" variant="ghost" size="sm">Code</ui-button>
+        <ui-button [href]="p.repoUrl" target="_blank" variant="ghost" size="sm"
+          ><ui-icon name="github" />GitHub</ui-button
+        >
       </div>
     </div>
 
