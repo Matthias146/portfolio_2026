@@ -18,4 +18,5 @@ export interface Project {
   sections?: ProjectSection[];
   coverImage?: string;
   screenshots?: string[];
+  ogImage?: string;
 }
