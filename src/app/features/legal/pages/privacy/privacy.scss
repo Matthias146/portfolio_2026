@@ -88,8 +88,8 @@
   align-items: center;
   gap: 8px;
   max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: normal;
+  overflow-wrap: anywhere;
   text-overflow: ellipsis;
   padding: 8px 10px;
   border-radius: 12px;

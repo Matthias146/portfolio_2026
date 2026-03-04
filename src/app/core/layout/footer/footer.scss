@@ -13,16 +13,25 @@
   flex-wrap: wrap;
 }
 
-.footer-links {
-  display: flex;
-  gap: 12px;
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
 
-  a {
-    color: var(--muted);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--text);
-    }
+  &:hover {
+    color: var(--text);
+    background: color-mix(in srgb, var(--surface) 85%, transparent);
   }
+}
+
+.footer-links a.active {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 22%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
 }
