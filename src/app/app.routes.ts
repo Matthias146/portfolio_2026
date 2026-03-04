@@ -10,13 +10,23 @@ export const routes: Routes = [
     path: '',
     component: Home,
     title: 'Home',
-    data: { description: 'Angular Portfolio von Matthias Hammelehle.' },
+    data: {
+      description: 'Angular Portfolio von Matthias Hammelehle.',
+      ogTitle: 'Matthias Hammelehle · Angular Portfolio',
+      ogDescription: 'Moderne Angular Apps, saubere Architektur und Case Studies.',
+      ogImage: '/assets/og/og.png',
+    },
   },
   {
     path: 'projects',
     component: Projects,
     title: 'Projects',
-    data: { description: 'Ausgewählte Angular Projekte mit Case Studies.' },
+    data: {
+      description: 'Ausgewählte Angular Projekte mit Case Studies.',
+      ogTitle: 'Projects · Angular Portfolio',
+      ogDescription: 'Übersicht meiner Projekte (Angular, UI, Auth, API).',
+      ogImage: '/assets/og/og.png',
+    },
   },
   {
     path: 'projects/:slug',
