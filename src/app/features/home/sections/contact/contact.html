@@ -1,0 +1,39 @@
+<ui-section
+  title="Contact"
+  subtitle="Lass uns kurz sprechen – ich freue mich über Austausch oder Jobmöglichkeiten."
+>
+  <div class="grid">
+    <ui-card [hoverable]="true" title="Direkt kontaktieren" subtitle="Am schnellsten per Mail.">
+      <div class="actions">
+        <ui-button [href]="'mailto:' + email" variant="primary">
+          <ui-icon name="mail"></ui-icon>
+          Mail schreiben
+        </ui-button>
+
+        <ui-button [href]="github" target="_blank" variant="ghost">
+          <ui-icon name="github"></ui-icon>
+          GitHub
+        </ui-button>
+
+        <ui-button [href]="linkedin" target="_blank" variant="ghost">
+          <ui-icon name="linkedin"></ui-icon>
+          LinkedIn
+        </ui-button>
+      </div>
+
+      <div class="meta">
+        <ui-badge variant="soft">Germany</ui-badge>
+        <ui-badge variant="soft">Remote/On-site</ui-badge>
+        <ui-badge variant="soft">Angular</ui-badge>
+      </div>
+    </ui-card>
+
+    <ui-card [hoverable]="true" title="Was du bekommst" subtitle="Kurz zusammengefasst.">
+      <ul class="bullets">
+        <li>Saubere Angular-Struktur (Standalone, Signals, Feature-Slices)</li>
+        <li>UI mit Tokens & wiederverwendbaren Komponenten</li>
+        <li>Git/CI/README Hygiene – nachvollziehbar & teamtauglich</li>
+      </ul>
+    </ui-card>
+  </div>
+</ui-section>

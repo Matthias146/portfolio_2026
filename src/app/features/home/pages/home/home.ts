@@ -3,10 +3,11 @@ import { Hero } from '../../sections/hero/hero';
 import { Highlights } from '../../sections/highlights/highlights';
 import { FeaturedProjects } from '../../sections/featured-projects/featured-projects';
 import { Skills } from '../../sections/skills/skills';
+import { Contact } from '../../sections/contact/contact';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, Highlights, FeaturedProjects, Skills],
+  imports: [Hero, Highlights, FeaturedProjects, Skills, Contact],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
