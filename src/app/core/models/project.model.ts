@@ -1,4 +1,14 @@
-export type ProjectTag = 'angular' | 'api' | 'auth' | 'fullstack' | 'ui';
+export type ProjectTag =
+  | 'angular'
+  | 'api'
+  | 'auth'
+  | 'fullstack'
+  | 'ui'
+  | 'firebase'
+  | 'signals'
+  | 'realtime'
+  | 'testing'
+  | 'performance';
 
 export interface ProjectSection {
   title: string;

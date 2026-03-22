@@ -4,25 +4,42 @@ export const PROJECTS: Project[] = [
   {
     slug: 'kanban',
     title: 'Kanban Board',
-    summary: 'Task-Management App mit Fokus auf Struktur, UI-State und sauberem Datenfluss.',
-    stack: ['Angular', 'Signals', 'TypeScript', 'SCSS', 'CDK'],
-    highlights: ['Drag & Drop', 'Spalten & Tasks', 'Persistenz (LocalStorage)'],
-    repoUrl: 'https://github.com/',
-    liveUrl: 'https://matthias-hammelehle.dev/',
+    summary:
+      'Moderne Kanban-App mit Angular 21, Firebase Auth, Firestore Realtime-Updates und produktorientiertem Dark UI.',
+    stack: [
+      'Angular 21',
+      'Signals',
+      'TypeScript',
+      'SCSS',
+      'Angular CDK',
+      'Firebase Auth',
+      'Cloud Firestore',
+      'Vitest',
+    ],
+    highlights: [
+      'Firebase Auth + Gastzugang',
+      'Realtime Board Updates',
+      'Drag & Drop mit Angular CDK',
+      'User-basierte Firestore Rules',
+      'Create / Edit / Delete Tasks',
+      'Toast Feedback + Loading States',
+    ],
+    repoUrl: 'https://github.com/Matthias146/kanban_board',
+    liveUrl: 'https://kanban.matthias-hammelehle.dev/',
     featured: true,
-    tags: ['angular', 'ui'],
+    tags: ['angular', 'firebase', 'signals', 'realtime', 'ui'],
     sections: [
       {
         title: 'Ziel',
-        body: 'Eine strukturierte Task-App, die zeigt, wie ich State, UI und Architektur in Angular aufbaue.',
+        body: 'Eine portfolio-taugliche Task-Management-App bauen, die modernes Angular, saubere Architektur, Realtime-Datenfluss und eine produktnahe UI miteinander verbindet.',
       },
       {
         title: 'Technische Entscheidungen',
-        body: 'Signals für UI-State, feature-orientierte Struktur, wiederverwendbare UI-Komponenten, klare Router-Struktur.',
+        body: 'Angular Signals für reaktiven UI-State, feature-orientierte Struktur, getrennte Query-/Command-/Seed-Services für Firestore, Firebase Authentication für registrierte und anonyme Nutzer sowie Realtime-Listener statt manueller Reload-Logik.',
       },
       {
         title: 'Learnings',
-        body: 'State-Flow sauber halten, UI-States konsequent abbilden (loading/error/empty) und Layout als AppShell denken.',
+        body: 'Ich habe gelernt, wie man Firestore-Realtime-Updates sauber in einen Angular-State-Flow integriert, User-Daten über Security Rules absichert, asynchrone UI-Zustände konsequent behandelt und ein Projekt technisch wie optisch von einer Demo zu einer echten Produkt-App weiterentwickelt.',
       },
     ],
     coverImage: '',
@@ -41,8 +58,8 @@ export const PROJECTS: Project[] = [
     tags: ['angular', 'api'],
     sections: [
       {
-        title: 'Ziel',
-        body: 'Eine strukturierte Task-App, die zeigt, wie ich State, UI und Architektur in Angular aufbaue.',
+        title: 'Status',
+        body: 'Das Projekt befindet sich noch in der Entwicklung und wird bald zur verfügung stehen.',
       },
       {
         title: 'Technische Entscheidungen',
@@ -69,8 +86,8 @@ export const PROJECTS: Project[] = [
     tags: ['angular', 'auth'],
     sections: [
       {
-        title: 'Ziel',
-        body: 'Eine strukturierte Task-App, die zeigt, wie ich State, UI und Architektur in Angular aufbaue.',
+        title: 'Status',
+        body: 'Das Projekt befindet sich noch in der Entwicklung und wird bald zur verfügung stehen.',
       },
       {
         title: 'Technische Entscheidungen',
