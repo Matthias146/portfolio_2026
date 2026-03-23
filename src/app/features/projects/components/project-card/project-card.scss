@@ -103,3 +103,11 @@
   background: color-mix(in srgb, var(--surface) 92%, transparent);
   color: var(--muted);
 }
+
+.wip-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 4;
+  backdrop-filter: blur(8px);
+}

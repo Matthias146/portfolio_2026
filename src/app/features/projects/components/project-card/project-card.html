@@ -13,6 +13,13 @@
         </div>
       </div>
     }
+
+    <!-- WIP Badge -->
+    @if (project().status === 'wip') {
+      <ui-badge class="wip-badge" variant="accent">WIP</ui-badge>
+    }
+
+    <!-- whole card clickable (except actions) -->
     <a class="stretched-link" [routerLink]="['/projects', project().slug]">
       {{ project().title }}
     </a>
@@ -33,15 +40,21 @@
     </ul>
 
     <div class="actions">
-      @if (project().liveUrl) {
-        <ui-button [href]="project().liveUrl" target="_blank" variant="primary" size="sm">
-          Live <ui-icon name="external" />
+      @if (project().status === 'live' && project().liveUrl) {
+        <ui-button [href]="project().liveUrl!" target="_blank" variant="primary" size="sm">
+          <ui-icon name="external"></ui-icon>
+          Live Demo
+        </ui-button>
+      } @else {
+        <ui-button variant="ghost" size="sm" disabled> Coming soon </ui-button>
+      }
+
+      @if (project().status === 'live' && project().repoUrl) {
+        <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm">
+          <ui-icon name="github"></ui-icon>
+          GitHub
         </ui-button>
       }
-      <ui-button [href]="project().repoUrl" target="_blank" variant="ghost" size="sm">
-        <ui-icon name="github" />
-        GitHub
-      </ui-button>
     </div>
   </div>
 </ui-card>
