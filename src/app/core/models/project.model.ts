@@ -23,7 +23,7 @@ export interface Project {
   summary: string;
   stack: string[];
   highlights: string[];
-  repoUrl: string;
+  repoUrl?: string;
   liveUrl?: string;
   featured: boolean;
   tags: ProjectTag[];

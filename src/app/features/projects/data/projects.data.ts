@@ -26,6 +26,7 @@ export const PROJECTS: Project[] = [
     ],
     repoUrl: 'https://github.com/Matthias146/kanban_board',
     liveUrl: 'https://kanban.matthias-hammelehle.dev/',
+    status: 'live',
     featured: true,
     tags: ['angular', 'firebase', 'signals', 'realtime', 'ui'],
     sections: [
@@ -52,8 +53,9 @@ export const PROJECTS: Project[] = [
     summary: 'API Viewer mit Suche, Filter, Detailseiten und sauberen Loading/Error States.',
     stack: ['Angular', 'HTTP', 'Signals', 'TypeScript', 'SCSS'],
     highlights: ['Search & Filter', 'Loading/Error/Empty States', 'Detail View'],
-    repoUrl: 'https://github.com/<dein-user>/api-explorer-angular',
-    liveUrl: 'https://<dein-live-link>/api-explorer',
+    // repoUrl: 'https://github.com/<dein-user>/api-explorer-angular',
+    // liveUrl: 'https://<dein-live-link>/api-explorer',
+    status: 'wip',
     featured: true,
     tags: ['angular', 'api'],
     sections: [
@@ -80,8 +82,9 @@ export const PROJECTS: Project[] = [
     summary: 'Login/Register Flow mit Guards und einer strukturierten AppShell.',
     stack: ['Angular', 'Routing', 'Guards', 'TypeScript', 'SCSS'],
     highlights: ['Auth Flow', 'Route Guards', 'Modulare Feature-Struktur'],
-    liveUrl: 'https://<dein-live-link>/api-explorer',
-    repoUrl: 'https://github.com/<dein-user>/auth-dashboard-angular',
+    // liveUrl: 'https://<dein-live-link>/api-explorer',
+    // repoUrl: 'https://github.com/<dein-user>/auth-dashboard-angular',
+    status: 'wip',
     featured: true,
     tags: ['angular', 'auth'],
     sections: [
