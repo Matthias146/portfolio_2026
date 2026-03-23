@@ -18,30 +18,34 @@ export interface HighlightItem {
 export class Highlights {
   title = input<string>('Kurzprofil');
   subtitle = input<string>(
-    'Drei Dinge, die meine Angular-Arbeit ausmachen: Architektur, moderner State und saubere UI-Umsetzung.',
+    'Drei Dinge, die meine Angular-Arbeit gut beschreiben: moderner Aufbau, saubere Umsetzung und eine ruhige UI.',
   );
 
   items = input<HighlightItem[]>([
     {
       title: 'Angular · Standalone & Signals',
-      subtitle: 'Modern Angular-first: klare Strukturen, stabile Datenflüsse.',
+      subtitle: 'Modernes Angular, ohne unnötigen Ballast.',
       bullets: [
         'Standalone Components',
-        'Signals / computed / effects',
-        'Routing & Feature-Slices',
+        'Signals für State & UI-Logik',
+        'Feature-Slices statt „alles überall“',
       ],
       tags: ['Angular', 'Signals', 'TypeScript'],
     },
     {
-      title: 'Code Quality · Clean & Maintainable',
-      subtitle: 'Lesbar, nachvollziehbar, teamtauglich.',
-      bullets: ['Small commits & PRs', 'Conventional Commits', 'Lint/Format + CI Checks'],
+      title: 'Code · Klar & nachvollziehbar',
+      subtitle: 'Lesbar, teamtauglich und ohne Magie.',
+      bullets: ['Kleine Commits & PRs', 'Lint/Format + CI Checks', 'Saubere Struktur & README'],
       tags: ['Git', 'CI', 'Clean Code'],
     },
     {
-      title: 'UI · SCSS & Responsive',
-      subtitle: 'Produkt-Feeling statt Demo-Feeling.',
-      bullets: ['Design Tokens (CSS Vars)', 'Reusable UI Components', 'Responsive Layout & States'],
+      title: 'UI · Ruhig & konsistent',
+      subtitle: 'Responsive, sauber abgestimmt, ohne unnötige Effekte.',
+      bullets: [
+        'SCSS Tokens (CSS Variables)',
+        'Wiederverwendbare UI-Components',
+        'Saubere UI-States (loading/empty/error)',
+      ],
       tags: ['SCSS', 'UI', 'Responsive'],
     },
   ]);

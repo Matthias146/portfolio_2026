@@ -22,28 +22,28 @@ export class Skills {
     {
       icon: 'angular',
       title: 'Angular',
-      subtitle: 'Standalone · Signals · Routing · Forms',
+      subtitle: 'Signals, Routing und ein klarer, wartbarer Aufbau.',
       pills: ['Signals', 'Standalone', 'Routing', 'Forms'],
     },
     {
       icon: 'ts',
       title: 'TypeScript',
-      subtitle: 'Typed APIs · Clean Code · Reusable Components',
+      subtitle: 'Typen, Interfaces und Code, den man gut lesen kann.',
       pills: ['Types', 'Refactor', 'Architecture', 'DX'],
     },
     {
       icon: 'ui',
       title: 'UI / Styling',
-      subtitle: 'SCSS Tokens · Responsive Layout · Component UI',
+      subtitle: 'SCSS Tokens, Layout und responsive Details.',
       pills: ['SCSS', 'Tokens', 'Responsive', 'A11y'],
     },
     {
       icon: 'git',
       title: 'Tooling / Workflow',
-      subtitle: 'GitHub · CI · Lint/Format · PR Workflow',
+      subtitle: 'GitHub, CI und ein sauberer Review-Flow.',
       pills: ['Git', 'GitHub', 'CI', 'Conventional Commits'],
     },
   ];
 
-  also: string[] = ['RxJS basics', 'REST APIs', 'Testing basics', 'Performance', 'SEO basics'];
+  also: string[] = ['RxJS Basics', 'REST APIs', 'Testing Basics', 'Performance', 'SEO Basics'];
 }
