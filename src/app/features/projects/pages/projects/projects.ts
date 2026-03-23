@@ -16,6 +16,7 @@ type Filter = 'all' | ProjectTag;
 export class Projects {
   query = signal('');
   filter = signal<Filter>('all');
+  showFilters = computed(() => PROJECTS.length >= 5);
 
   filters: { key: Filter; label: string }[] = [
     { key: 'all', label: 'All' },
