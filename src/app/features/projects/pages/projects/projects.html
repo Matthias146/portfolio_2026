@@ -1,6 +1,6 @@
 <ui-section
   title="Projects"
-  subtitle="Übersicht meiner Projekte — filterbar nach Fokus (Angular, API, Auth, UI)."
+  subtitle="Hier zeige ich meine Projekte. Eins ist schon live, der Rest ist gerade in Arbeit."
 >
   @if (showFilters()) {
     <div class="toolbar">
@@ -30,7 +30,7 @@
   @if (projects().length === 0) {
     <div class="empty">
       <ui-badge>No results</ui-badge>
-      <p>Try another filter or search term.</p>
+      <p>Ich finde dazu gerade nichts. Probier einen anderen Begriff.</p>
     </div>
   } @else {
     <div class="grid">
