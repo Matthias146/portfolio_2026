@@ -10,6 +10,8 @@ export type ProjectTag =
   | 'testing'
   | 'performance';
 
+export type ProjectStatus = 'wip' | 'live';
+
 export interface ProjectSection {
   title: string;
   body: string;
@@ -29,4 +31,5 @@ export interface Project {
   coverImage?: string;
   screenshots?: string[];
   ogImage?: string;
+  status: ProjectStatus;
 }
