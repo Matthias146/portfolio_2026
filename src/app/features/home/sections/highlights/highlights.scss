@@ -1,7 +1,16 @@
+:host ::ng-deep .card {
+  height: 100%;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  align-items: stretch;
+}
+
+.grid > ui-card {
+  height: 100%;
 }
 
 .bullets {
