@@ -5,7 +5,7 @@ export const PROJECTS: Project[] = [
     slug: 'kanban',
     title: 'Kanban Board',
     summary:
-      'Moderne Kanban-App mit Angular 21, Firebase Auth, Firestore Realtime-Updates und produktorientiertem Dark UI.',
+      'Kanban-App mit Angular 21 und Firebase: Auth, Realtime-Updates in Firestore und ein produktnahes Dark UI.',
     stack: [
       'Angular 21',
       'Signals',
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
     sections: [
       {
         title: 'Status',
-        body: 'Das Projekt befindet sich noch in der Entwicklung und wird bald zur verfügung stehen.',
+        body: 'Das Projekt ist noch in Arbeit. Ich ergänze Demo und Repo Schritt für Schritt.',
       },
       {
         title: 'Technische Entscheidungen',
@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
     sections: [
       {
         title: 'Status',
-        body: 'Das Projekt befindet sich noch in der Entwicklung und wird bald zur verfügung stehen.',
+        body: 'Das Projekt ist noch in Arbeit. Ich ergänze Demo und Repo Schritt für Schritt.',
       },
       {
         title: 'Technische Entscheidungen',
