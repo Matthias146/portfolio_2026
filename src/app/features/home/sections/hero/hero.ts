@@ -33,7 +33,5 @@ export class Hero {
 
   displayPills = computed(() => this.pills().slice(0, 4));
 
-  currentFocus = input<string>(
-    'Gerade baue ich: Portfolio 2026, Case Studies und ein kleines UI-System.',
-  );
+  currentFocus = input<string>('Gerade baue ich: Auth Dashboard mit Angular 21.');
 }

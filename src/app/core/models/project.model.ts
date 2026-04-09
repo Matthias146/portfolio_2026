@@ -6,9 +6,15 @@ export type ProjectTag =
   | 'ui'
   | 'firebase'
   | 'signals'
+  | 'signal-forms'
   | 'realtime'
   | 'testing'
-  | 'performance';
+  | 'performance'
+  | 'rxResource'
+  | 'Vitest'
+  | 'b2b'
+  | 'tooling'
+  | 'supabase';
 
 export type ProjectStatus = 'wip' | 'live';
 
